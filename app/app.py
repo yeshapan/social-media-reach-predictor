@@ -27,13 +27,19 @@ st.markdown("""
     .css-18e3th9 {
         padding-top: 1rem;
     }
+            
+    /*  NOT NEEDED AS WE'RE USING H1 TAG
     .title {
-        font-family: 'TimesNewRoman', sans-serif;
-        font-size: 2.3rem;
-        color: #E75480; /*Baby pink obviously hehe*/
+        font-family: Avenir, Helvetica, "sans serif";
+        font-size: 100rem; /* same size as h1 */
+        font-weight: bold; /* h1 is usually bold */
+        color: #F5F5F5; /* whitesmoke */
         text-align: center;
+        margin-top: 0;
         margin-bottom: 1.0rem;
     }
+    */
+
     .subtitle {
         font-family: Avenir, Helvetica, "sans serif";
         font-size: 0.8rem;
@@ -72,17 +78,17 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 #top header and logo
-col1, col2, col3 = st.columns([1,8,1])
+col1, col2, col3 = st.columns([1,9,1])
 with col1:
     st.image("assets/logo.jpeg", width=20) #logo hehe
 with col2:
-    st.markdown("<h1 class='title'>Predict your reach on Instagram</h1>", unsafe_allow_html=True)
-    st.markdown("<p class='subtitle'>coffee.compile ☕ by Yesha</p>", unsafe_allow_html=True)
+    st.markdown("<h1 class='title' align='center' margin-bottom=5rem>Predict your likes on Instagram</h1>", unsafe_allow_html=True)
+    
 with col3:
     st.write("") #just empty for centering
 
 #input fields
-st.write("### Enter your Instagram stats below⬇️:")
+st.write("##### Enter your Instagram stats below⬇️:")
 
 followers = st.number_input('👥 Number of Followers:', min_value=0, step=10)
 
